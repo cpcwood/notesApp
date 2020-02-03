@@ -9,3 +9,5 @@ describe('hello array fail', expect(["hi", "bye"]).contains("hello"))
 describe('class matcher fail', expect(2).toBeA("hello"))
 
 describe('class matcher pass', expect("hi").toBeA("hello"))
+
+describe('string contains letter', expect('hello').contains("h"))

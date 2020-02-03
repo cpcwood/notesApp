@@ -1,0 +1,3 @@
+function notesController(notesModel, notesView) {
+  
+}
