@@ -23,3 +23,8 @@ notesModel.addNote('Another note')
 describe('ID squentially increments by 1', 
   expect(notesModel.notesArray[1]['id']).toEq(2)
 )
+
+describe('returns note by ID', 
+  expect(notesModel.returnNote(1)['id']).toEq(1)
+  )
+  

@@ -10,7 +10,13 @@ var NotesModel = function(){
     this.notesArray.push(note)
   }
 
-  
+  this.returnNote = function(id) {
+    var findNote = function(note) {
+      return note['id'] == id 
+    }
+    var result = this.notesArray.find(findNote)
+    return result
+  }
 
 
   
