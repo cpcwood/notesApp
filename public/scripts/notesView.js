@@ -1,22 +1,23 @@
 var NotesView = function() {
 	this.renderStructure = function() {
-		document.body.innerHTML += `<header> 
-        <div class="logoParent"><a href="index.html" title="logo"><h1><img src="images/slug.jpg"  height="60" width="60"></h1></a>
-          <h1> Slug Note Adder </h1>  
+		document.body.innerHTML += `<div class="firstPage"><header class="mainNav"> 
+        <div class="logoParent"><a href="index.html" title="logo"><h1><img src="../images/slug.jpg"  height="60" width="60"></h1></a>
+          <h2 class="pageHeader"> Slug Note Adder: "like normal notes only stickier" </h2>  
         </div>
       </header>
-      <div class='container'>
+      <div class='columns2'>
 
-        <div class='notesList'>
-          <h1> Lists <h1>
+        <div class='left'>
+          <h2> Lists <h2>
           <ul class="notesListLines"></ul>
           <h3> --------------- </h3>
         </div>
 
-        <div class='addNotes'></div>
-          <h1> Add a New Note </h1>
-          <div class=newNoteForm></div>
-      
+        <div class='right'>
+          <h2> Add a New Note </h2>
+          <div class="newNoteForm"></div>
+        </div>
+      </div>
       </div>`;
 	};
 
@@ -25,7 +26,7 @@ var NotesView = function() {
 		if (typeof notes[0] !== 'undefined') {
 			notes.forEach(function(note) {
 				nLL.innerHTML += `
-          <li class = listItem>
+          <li class='listItem' id='${note.id}'>
             ${note.title}
           </li>
         `;
