@@ -1,6 +1,6 @@
-"use strict"
+'use strict';
 
-window.addEventListener("load", function() {
-  // Creates new controller when webpage is opened
-  window.notesController = new GameController(new notesModel, new notesView)
-})
+window.addEventListener('load', function() {
+	// Creates new controller when webpage is opened
+	window.notesController = new NotesController(new NotesModel(), new NotesView());
+});
