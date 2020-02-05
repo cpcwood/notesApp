@@ -18,7 +18,11 @@ var NotesView = function() {
           <div class="newNoteForm"></div>
         </div>
       </div>
-      </div>`;
+      <div class='modal'>
+        <div class='window'></div>
+      </div>
+     
+    </div>`;
 	};
 
 	this.renderNotesList = function(notes) {
@@ -38,11 +42,36 @@ var NotesView = function() {
 	this.renderNewNote = function() {
 		var rNN = document.querySelector('.newNoteForm');
 		rNN.innerHTML = `
-        <textarea id = "textarea" placeholder="Enter note here..."></textarea>
+        <textarea class = "textarea" id = "textarea" placeholder="Enter note here..."></textarea>
         <button id="newMessage">New</button>
       
       `;
 	};
+
+	this.renderShowNote = function(note) {
+		var rSN = document.querySelector('.window');
+		rSN.innerHTML = `
+        <div class="modal-content">
+          <div class="modal-header">
+            ${note.id} : ${note.title}
+          </div>
+          <div class="modal-body">
+            ${note.note}
+          </div>
+          <div class=modal-footer>
+            <button class="close" id="closeWindow">Close</button>
+          </div>
+        </div>
+      `;
+		var modal = document.querySelector('.modal');
+		modal.style.display = 'block';
+	};
+
+	this.renderCloseNote = function() {
+		var modal = document.querySelector('.modal');
+		modal.style.display = 'none';
+	};
+
 	this.extractText = function() {
 		var textarea = document.getElementById('textarea');
 		var text = textarea.value;
@@ -50,3 +79,8 @@ var NotesView = function() {
 		return text;
 	};
 };
+
+test = new NotesView();
+test.renderStructure();
+test.renderNewNote();
+// test.renderShowNote({ id: '1', title: 'Short title Note', note: 'all our text goes in here' });
