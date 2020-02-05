@@ -24,6 +24,7 @@ var NotesView = function() {
 	this.renderNotesList = function(notes) {
 		var nLL = document.querySelector('.notesListLines');
 		if (typeof notes[0] !== 'undefined') {
+      nLL.innerHTML = ''
 			notes.forEach(function(note) {
 				nLL.innerHTML += `
           <li class='listItem' id='${note.id}'>
@@ -45,7 +46,7 @@ var NotesView = function() {
 	this.extractText = function() {
 		var textarea = document.getElementById('textarea');
 		var text = textarea.value;
-		textarea.value = '';
+    textarea.value = '';
 		return text;
 	};
 };
