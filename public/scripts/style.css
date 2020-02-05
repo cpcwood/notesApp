@@ -82,10 +82,12 @@ body {
     /* prevent scaling past src width (or not) */
     /* max-width: 1200px; */
 }
-.iconBoxes {
+.textrea{
     width: 80%;
     margin: 0 auto; /*centre*/
-    padding-top:50px;
+    padding-top:20px;
+    min-height: 100px;
+    min-width: 100px;
     height: auto;
     display: flex;
     display: -webkit-flex;
@@ -93,28 +95,28 @@ body {
     color: antiquewhite;
 }
 
-.trust, .transparency, .traceability {
-    background-color: rgba(0, 148, 255, 0.1);
+.close, #newMessage{
+    background-color: darkslateblue;
     flex: 1 1 0;
     -webkit-flex: 1 1 0;
     -ms-flex: 1 1 100px;
-    padding: 30px; /*add space from content to border*/
-    min-height: 100px;
+    padding: 3px; /*add space from content to border*/
+    min-height: 20px;
     border: 2px ridge grey;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    border-radius: 2px;
+    margin-bottom: 5px;
     transition: all 1s;
 }
-    .trust:hover, .transparency:hover, .traceability:hover {
+    .close:hover, #newMessage:hover {
         background-color: rgba(0, 148, 255,1);
         flex: 1 1 0;
         -webkit-flex: 1 1 0;
         -ms-flex: 1 1 100px;
-        padding: 30px; /*add space from content to border*/
-        min-height: 100px;
+        padding: 3px; /*add space from content to border*/
+        min-height: 20px;
         border: 2px ridge grey;
-        border-radius: 10px;
-        margin-bottom: 20px;
+        border-radius: 2px;
+        margin-bottom: 5px;
         transition: all 1s;
     }
 
@@ -124,14 +126,6 @@ body {
     margin-right: auto;
     width: 30%;
     color: darkred;
-}
-
-
-/************************************************/
-/***************  Second Page Section ***********/
-/************************************************/
-.secondPage {
-    background: #f4e7e7;
 }
 .pageHeader {
     padding: 40px 0px 0px 150px;
@@ -165,6 +159,96 @@ body {
 .right {
     min-height: 300px;
 }
+
+
+/* Modal Header */
+.modal-header {
+    position: relative;
+    display: block;
+    height: 5%;
+    padding: 2px 16px;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    letter-spacing:0.2em;
+    line-spacing:1.4em;
+    font-size: 1.2em;
+    color:#332d2d;
+  }
+  
+  /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  /* Modal Body */
+  .modal-body, .newNoteForm {
+      position: relative;
+      display: block;
+      padding: 2px 16px;
+      /* background: blue; */
+      height: 75%;
+      overflow: auto;
+      font-family: Arial, sans-serif;
+      text-align: left;
+      letter-spacing:0.2em;
+      line-spacing:1.2em;
+      font-size: 1em;
+      color:#332d2d;
+    }
+  
+  /* Modal Footer */
+  .modal-footer {
+    position: absolute;
+    display: block;
+    bottom: 0px;
+    right: 0px;
+    height: 15%;
+    padding: 2px 16px;
+    /* background: #5cb85c; */
+    color: white;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color:antiquewhite;
+    overflow: auto;
+    margin: 20%;
+    border: 1px solid #888;
+    height: 60%;
+    width: 60%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  /* Add Animation */
+  @keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }
+  /* The Close Button */
+.close, #newMessage {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover, #newMessage:hover,
+  .close:focus, #newMessage:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
  
 /************************************************/
 /***********   Alternate Screen Sizes  **********/
