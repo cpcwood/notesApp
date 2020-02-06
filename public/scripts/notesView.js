@@ -77,5 +77,6 @@ var NotesView = function() {
 		var text = textarea.value;
     textarea.value = '';
 		return text;
-	};
+  };
+  
 };
