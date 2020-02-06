@@ -1,16 +1,15 @@
 function NotesController(notesModel, notesView) {
+	this.notesView = notesView;
+	this.notesModel = notesModel;
 
-  this.notesView = notesView
-  this.notesModel = notesModel
-  
-  this.pageSetup = function() {
-    this.notesView.renderStructure();
-    this.notesView.renderNewNote();
-    var notes = this.notesModel.notesArray;
-    this.notesView.renderNotesList(notes);
-  }
+	this.pageSetup = function() {
+		this.notesView.renderStructure();
+		this.notesView.renderNewNote();
+		var notes = this.notesModel.notesArray;
+		this.notesView.renderNotesList(notes);
+	};
 
-    var alsoNotesController = this
+  var alsoNotesController = this
  
   this.addingNoteToList = function() {
     document.getElementById('newMessage').addEventListener("click", function() {
@@ -43,6 +42,5 @@ function NotesController(notesModel, notesView) {
   this.pageSetup();
   this.addingNoteToList();
   
+
 }
-
-

@@ -1,24 +1,30 @@
-﻿
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outliner: 0;
+﻿* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outliner: 0;
 }
 
-header, footer, nav, article, aside, ul, li {
-    /* HTML5 asigns blocks to all elements*/
-    display: block;
+header,
+footer,
+nav,
+article,
+aside,
+ul,
+li {
+	/* HTML5 asigns blocks to all elements*/
+	display: block;
 }
+
 h1 {
-    font-size: 55px;
+	font-size: 55px;
 }
 
 body {
-    background: #c0ddedd4;
-    color: #201e1e;
-    font-family: Roboto, sans-serif;
-    font-size: 14px; /*1em*/
+	background: #c0ddedd4;
+	color: #201e1e;
+	font-family: Roboto, sans-serif;
+	font-size: 14px; /*1em*/
 }
 
 /************************************************/
@@ -26,323 +32,346 @@ body {
 /************************************************/
 
 #toggle {
-    display: none;
-    color: #fff;
-    cursor: pointer;
-    padding: 10px 10px 10px 20px;
+	display: none;
+	color: #fff;
+	cursor: pointer;
+	padding: 10px 10px 10px 20px;
 }
 
 .mainNav {
-    height: auto;
-    background-color: rgba(213, 235, 247, 0.5);
-    display: flex;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    width: 100%;
-    flex: 5 1 0;
-    -webkit-flex: 5 1 0;
+	height: auto;
+	background-color: rgba(213, 235, 247, 0.5);
+	display: flex;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	width: 100%;
+	flex: 5 1 0;
+	-webkit-flex: 5 1 0;
+	flex-wrap: nowrap;
 }
 
-.logoParent {
-    flex: 1 1 0;
-    -webkit-flex: 1 1 0;
-    -ms-flex: 1 1 100px;
-    color: #ff6a00;
-    text-decoration: none;
-    position: relative;
-    top:13px
+.logo {
+	/* flex: 1 1 0; */
+	/* -webkit-flex: 1 1 0; */
+	/* -ms-flex: 1 1 100px; */
+	color: #ff6a00;
+	text-decoration: none;
+	position: relative;
+	/* top: 13px; */
 }
-
-.logoParent a {
-        /*aligns text in top to bottom*/
-        align-items: bottom;
-        -webkit-align-items: bottom;
-        -ms-flex-align: bottom;
-}
-
-
-/************************************************/
-/***************  First Page Section ************/
-/************************************************/
-
-
-.firstPage {
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: top center;
-    min-height: 600px;
-    width: 100%;
-    -ms-background-position-x: center;
-    -ms-background-position-y: bottom;
-    background-position: center bottom;
-    /* scale bg image proportionately */
-    background-size: cover;
-    /* ie8 workaround - http://louisremi.github.io/background-size-polyfill/ */
-    -ms-behavior: url(/backgroundsize.min.htc);
-    /* prevent scaling past src width (or not) */
-    /* max-width: 1200px; */
-}
-.textrea{
-    width: 80%;
-    margin: 0 auto; /*centre*/
-    padding-top:20px;
-    min-height: 100px;
-    min-width: 100px;
-    height: auto;
-    display: flex;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    color: antiquewhite;
-}
-
-.close, #newMessage{
-    background-color: darkslateblue;
-    flex: 1 1 0;
-    -webkit-flex: 1 1 0;
-    -ms-flex: 1 1 100px;
-    padding: 3px; /*add space from content to border*/
-    min-height: 20px;
-    border: 2px ridge grey;
-    border-radius: 2px;
-    margin-bottom: 5px;
-    transition: all 1s;
-}
-    .close:hover, #newMessage:hover {
-        background-color: rgba(0, 148, 255,1);
-        flex: 1 1 0;
-        -webkit-flex: 1 1 0;
-        -ms-flex: 1 1 100px;
-        padding: 3px; /*add space from content to border*/
-        min-height: 20px;
-        border: 2px ridge grey;
-        border-radius: 2px;
-        margin-bottom: 5px;
-        transition: all 1s;
-    }
 
 .boxText {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
-    color: darkred;
-}
-.pageHeader {
-    padding: 40px 0px 0px 150px;
-}
-.columns2 {
-    width: 85%;
-    margin: 0 auto; /*centre*/
-    height: auto;
-    display: flex;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-}
-.left {
-    width:30%;
-}
-.left, .right {
-    font-family: Arial, sans-serif;
-    text-align: left;
-    letter-spacing:0.2em;
-    line-spacing:1.4em;
-    font-size: 1.2em;
-    color:#332d2d;
-    padding: 10px 10px 0px 10px;
-    flex: 1 1 0;
-    -webkit-flex: 1 1 0;
-    -ms-flex: 1 1 100px;
-    padding: 10px; /*add space from content to border*/
-}
-/*selects and resizes all columns - flex property. 1st value grow, 2nd value - shrink, 3rd value - 
-    basis which is used to set a fixed width but only if both other values 0*/
-.right {
-    min-height: 300px;
+	position: relative;
+	/* top: 13px; */
+	align-self: center;
+	/* vertical-align: middle; */
+	/* display: block; */
+	margin-left: auto;
+	margin-right: auto;
+	/* width: 60%; */
+	color: darkred;
+	font-size: 200%;
 }
 
+/* .logoParent a { */
+/*aligns text in top to bottom*/
+/* align-items: bottom;
+	-webkit-align-items: bottom;
+	-ms-flex-align: bottom;
+} */
+
+.firstPage {
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: top center;
+	min-height: 600px;
+	width: 100%;
+	-ms-background-position-x: center;
+	-ms-background-position-y: bottom;
+	background-position: center bottom;
+	/* scale bg image proportionately */
+	background-size: cover;
+	/* ie8 workaround - http://louisremi.github.io/background-size-polyfill/ */
+	-ms-behavior: url(/backgroundsize.min.htc);
+	/* prevent scaling past src width (or not) */
+	/* max-width: 1200px; */
+}
+
+.textarea {
+	width: 80%;
+	margin: 20 auto; /*centre*/
+	padding-top: 20px;
+	min-height: 200px;
+	min-width: 100px;
+	height: auto;
+	display: flex;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	background-color: antiquewhite;
+	font-size: 130%;
+}
+
+.close,
+#newMessage {
+	background-color: darkslateblue;
+	flex: 1 1 0;
+	-webkit-flex: 1 1 0;
+	-ms-flex: 1 1 100px;
+	padding: 3px; /*add space from content to border*/
+	min-height: 20px;
+	border: 2px ridge grey;
+	border-radius: 2px;
+	margin-bottom: 5px;
+	transition: all 1s;
+}
+
+.close:hover,
+#newMessage:hover {
+	background-color: rgba(0, 148, 255, 1);
+	flex: 1 1 0;
+	-webkit-flex: 1 1 0;
+	-ms-flex: 1 1 100px;
+	padding: 3px; /*add space from content to border*/
+	min-height: 20px;
+	border: 2px ridge grey;
+	border-radius: 2px;
+	margin-bottom: 5px;
+	transition: all 1s;
+}
+
+.pageHeader {
+	padding: 40px 0px 0px 150px;
+}
+
+.columns2 {
+	width: 85%;
+	margin: 0 auto; /*centre*/
+	height: auto;
+	display: flex;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+}
+
+.left {
+	position: relative;
+	width: 30%;
+}
+
+.left,
+.right {
+	font-family: Arial, sans-serif;
+	text-align: center;
+	letter-spacing: 0.2em;
+	line-spacing: 1.4em;
+	font-size: 1.2em;
+	color: #332d2d;
+	padding: 10px 10px 0px 10px;
+	padding: 10px; /*add space from content to border*/
+}
+
+.right {
+	position: relative;
+	width: 70%;
+	min-height: 300px;
+}
 
 /* Modal Header */
 .modal-header {
-    position: relative;
-    display: block;
-    height: 5%;
-    padding: 2px 16px;
-    font-family: Arial, sans-serif;
-    text-align: left;
-    letter-spacing:0.2em;
-    line-spacing:1.4em;
-    font-size: 1.2em;
-    color:#332d2d;
-  }
-  
-  /* The Modal (background) */
+	position: relative;
+	display: block;
+	height: 5%;
+	padding: 2px 16px;
+	font-family: Arial, sans-serif;
+	text-align: left;
+	letter-spacing: 0.2em;
+	line-spacing: 1.4em;
+	font-size: 1.2em;
+	color: #332d2d;
+}
+
+/* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  /* Modal Body */
-  .modal-body, .newNoteForm {
-      position: relative;
-      display: block;
-      padding: 2px 16px;
-      /* background: blue; */
-      height: 75%;
-      overflow: auto;
-      font-family: Arial, sans-serif;
-      text-align: left;
-      letter-spacing:0.2em;
-      line-spacing:1.2em;
-      font-size: 1em;
-      color:#332d2d;
-    }
-  
-  /* Modal Footer */
-  .modal-footer {
-    position: absolute;
-    display: block;
-    bottom: 0px;
-    right: 0px;
-    height: 15%;
-    padding: 2px 16px;
-    /* background: #5cb85c; */
-    color: white;
-  }
-  
-  /* Modal Content */
-  .modal-content {
-    position: relative;
-    background-color:antiquewhite;
-    overflow: auto;
-    margin: 20%;
-    border: 1px solid #888;
-    height: 60%;
-    width: 60%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    animation-name: animatetop;
-    animation-duration: 0.4s
-  }
-  
-  /* Add Animation */
-  @keyframes animatetop {
-    from {top: -300px; opacity: 0}
-    to {top: 0; opacity: 1}
-  }
-  /* The Close Button */
-.close, #newMessage {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover, #newMessage:hover,
-  .close:focus, #newMessage:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
- 
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Body */
+.modal-body,
+.newNoteForm {
+	position: relative;
+	display: block;
+	padding: 2px 16px;
+	/* background: blue; */
+	height: 75%;
+	overflow: auto;
+	font-family: Arial, sans-serif;
+	text-align: left;
+	letter-spacing: 0.2em;
+	line-spacing: 1.2em;
+	font-size: 1em;
+	color: #332d2d;
+}
+
+/* Modal Footer */
+.modal-footer {
+	position: absolute;
+	display: block;
+	bottom: 0px;
+	right: 0px;
+	height: 15%;
+	padding: 2px 16px;
+	/* background: #5cb85c; */
+	color: white;
+}
+
+/* Modal Content */
+.modal-content {
+	position: relative;
+	background-color: antiquewhite;
+	overflow: auto;
+	margin: 20%;
+	border: 1px solid #888;
+	height: 60%;
+	width: 60%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	animation-name: animatetop;
+	animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+	from {
+		top: -300px;
+		opacity: 0;
+	}
+	to {
+		top: 0;
+		opacity: 1;
+	}
+}
+
+/* The Close Button */
+.close,
+#newMessage {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+#newMessage:hover,
+.close:focus,
+#newMessage:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
 /************************************************/
 /***********   Alternate Screen Sizes  **********/
 /************************************************/
 @media all and (max-width: 767px) /*phone as 1 less than iPad pixel width*/ {
-    #toggle {
-        display: block;
-    }
+	#toggle {
+		display: block;
+	}
 
-    .menu {
-        display: none;
-    }
+	.menu {
+		display: none;
+	}
 
-    .main, .navigationHolder, .menu {
-        width: 100%;
-        flex-flow: column;
-        -webkit-flex-flow: column;
-        -ms-flex-flow: column;
-    }
+	.main,
+	.navigationHolder,
+	.menu {
+		width: 100%;
+		flex-flow: column;
+		-webkit-flex-flow: column;
+		-ms-flex-flow: column;
+	}
 
-    .mainNav {
-        height: auto;
-        /*aligns text Nav as now vertical*/
-        align-items: flex-start;
-        -webkit-align-items: flex-start;
-        -ms-flex-align: start;
-    }
+	.mainNav {
+		height: auto;
+		/*aligns text Nav as now vertical*/
+		align-items: flex-start;
+		-webkit-align-items: flex-start;
+		-ms-flex-align: start;
+	}
 
-    .menu li {
-        border-right: 0;
-        height: 45px;
-    }
+	.menu li {
+		border-right: 0;
+		height: 45px;
+	}
 
-    .logoParent {
-        padding-bottom: 0 0 15px 20px; /*top right bottom left*/
-    }
+	.logoParent {
+		padding-bottom: 0 0 15px 20px; /*top right bottom left*/
+	}
 
-    .tagLine {
-        font-size: 40px;
-    }
+	.tagLine {
+		font-size: 40px;
+	}
 
-    .tagLineDes {
-        font-size: 20px;
-    }
-    /*second page*/
-    .pageHeader {
-        padding: 40px 0px 0px 150px;
-        font-size: 30px
-    }
+	.tagLineDes {
+		font-size: 20px;
+	}
+	/*second page*/
+	.pageHeader {
+		padding: 40px 0px 0px 150px;
+		font-size: 30px;
+	}
 
-    .columns2, .thirdColumns2, .forthPage {
-        width: 100%;
-        flex-flow: column;
-        -webkit-flex-flow: column;
-        -ms-flex-flow: column;
-    }
+	.columns2,
+	.thirdColumns2,
+	.forthPage {
+		width: 100%;
+		flex-flow: column;
+		-webkit-flex-flow: column;
+		-ms-flex-flow: column;
+	}
 
-    .smallText .whiteHead {
-        font-size: 10px;
-    }
+	.smallText .whiteHead {
+		font-size: 10px;
+	}
 
-    .right {
-        width: 100%;
-        flex-flow: column;
-        -webkit-flex-flow: column;
-        -ms-flex-flow: column;
-    }
+	.right {
+		width: 100%;
+		flex-flow: column;
+		-webkit-flex-flow: column;
+		-ms-flex-flow: column;
+	}
 }
-    /*end of media script*/
-    @media all and (min-width: 768px) and (max-width: 1023px) { /*ipad width*/
 
-        .main {
-            width: 100%;
-            height: auto;
-            flex-flow: row wrap;
-            -webkit-flex-flow: row wrap;
-            -ms-flex-flow: row wrap;
-        }
+/*end of media script*/
+@media all and (min-width: 768px) and (max-width: 1023px) {
+	/*ipad width*/
 
-        .menu a:link {
-            padding: 8px 15px;
-            font-size: 0.8em;
-        }
+	.main {
+		width: 100%;
+		height: auto;
+		flex-flow: row wrap;
+		-webkit-flex-flow: row wrap;
+		-ms-flex-flow: row wrap;
+	}
 
-        /*second page*/
-        .pageHeader {
-            padding: 40px 0px 0px 150px;
-            font-size: 40px
-        }
+	.menu a:link {
+		padding: 8px 15px;
+		font-size: 0.8em;
+	}
 
-        .smallText .whiteHead {
-            font-size: 12px;
-        }
+	/*second page*/
+	.pageHeader {
+		padding: 40px 0px 0px 150px;
+		font-size: 40px;
+	}
 
-       
-    }
+	.smallText .whiteHead {
+		font-size: 12px;
+	}
 }
