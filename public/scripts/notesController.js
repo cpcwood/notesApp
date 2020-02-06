@@ -10,18 +10,16 @@ function NotesController(notesModel, notesView) {
     this.notesView.renderNotesList(notes);
   }
 
-  self = this;
-
-  
+    var alsoNotesController = this
+ 
   this.addingNoteToList = function() {
-    document.getElementById('newMessage').addEventListener('click', function(){
-      var text = self.notesView.extractText();
-      self.notesModel.addNote(text);
-      self.notesView.renderNotesList(self.notesModel.notesArray);
+    document.getElementById('newMessage').addEventListener("click", function() {
+      text = alsoNotesController.notesView.extractText();
+      alsoNotesController.notesModel.addNote(text);
+      alsoNotesController.notesView.renderNotesList(alsoNotesController.notesModel.notesArray);
     });
-    
-  }
 
+  }
   
   // these functions run when controller is created
   this.pageSetup();
