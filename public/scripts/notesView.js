@@ -84,8 +84,3 @@ var NotesView = function() {
 		return text;
 	};
 };
-
-// test = new NotesView();
-// test.renderStructure();
-// test.renderNewNote();
-// test.renderShowNote({ id: '1', title: 'Short title Note', note: 'all our text goes in here' });
