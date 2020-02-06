@@ -1,8 +1,13 @@
 var NotesView = function() {
 	this.renderStructure = function() {
-		document.body.innerHTML += `<div class="firstPage"><header class="mainNav"> 
-        <div class="logoParent"><a href="index.html" title="logo"><h1><img src="../images/slug.jpg"  height="60" width="60"></h1></a>
-          <h2 class="pageHeader"> Slug Note Adder: "like normal notes only stickier" </h2>  
+		document.body.innerHTML += `
+    <div class="firstPage">
+      <header class="mainNav"> 
+        <div class="logo">
+          <img src="../images/slug.jpg"  height="60" width="60">
+        </div>
+        <div class="boxText"> 
+          Slug Note Adder: "like normal notes only stickier"  
         </div>
       </header>
       <div class='columns2'>
@@ -28,7 +33,7 @@ var NotesView = function() {
 	this.renderNotesList = function(notes) {
 		var nLL = document.querySelector('.notesListLines');
 		if (typeof notes[0] !== 'undefined') {
-      nLL.innerHTML = ''
+			nLL.innerHTML = '';
 			notes.forEach(function(note) {
 				nLL.innerHTML += `
           <li class='listItem' id='${note.id}'>
@@ -75,12 +80,12 @@ var NotesView = function() {
 	this.extractText = function() {
 		var textarea = document.getElementById('textarea');
 		var text = textarea.value;
-    textarea.value = '';
+		textarea.value = '';
 		return text;
 	};
 };
 
-test = new NotesView();
-test.renderStructure();
-test.renderNewNote();
+// test = new NotesView();
+// test.renderStructure();
+// test.renderNewNote();
 // test.renderShowNote({ id: '1', title: 'Short title Note', note: 'all our text goes in here' });
