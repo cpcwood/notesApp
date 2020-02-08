@@ -12,7 +12,9 @@ function NotesController(notesModel, notesView) {
   var alsoNotesController = this
  
   this.addingNoteToList = function() {
+    console.log(newMessage)
     document.getElementById('newMessage').addEventListener("click", function() {
+      console.log(newMessage)
       text = alsoNotesController.notesView.extractText();
       alsoNotesController.notesModel.addNote(text);
       alsoNotesController.notesView.renderNotesList(alsoNotesController.notesModel.notesArray);
