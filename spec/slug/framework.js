@@ -17,7 +17,7 @@ function describe(str, resultHash) {
 
 function expect(methodValue){
   this.toEq = function(comparisonValue){
-    if(comparisonValue === methodValue){
+    if(comparisonValue == methodValue){
       return {message: "Passed", 'passed': true, 'expected': comparisonValue, 'got': methodValue}
     } else {
       return {message: `Failed. Expected ${comparisonValue}, got ${methodValue}`, 'passed': false, 'expected': comparisonValue, 'got': methodValue}

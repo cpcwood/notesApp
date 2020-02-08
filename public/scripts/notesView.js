@@ -1,6 +1,6 @@
-var NotesView = function() {
-	this.renderStructure = function() {
-		document.body.innerHTML += `
+var NotesView = function(doc) {
+	this.renderStructure = 3{
+		doc.body.innerHTML += `
     <div class="firstPage">
       <header class="mainNav"> 
         <div class="logo">
@@ -31,7 +31,7 @@ var NotesView = function() {
 	};
 
 	this.renderNotesList = function(notes) {
-		var nLL = document.querySelector('.notesListLines');
+		var nLL = doc.querySelector('.notesListLines');
 		if (typeof notes[0] !== 'undefined') {
 			nLL.innerHTML = '';
 			notes.forEach(function(note) {
@@ -45,7 +45,7 @@ var NotesView = function() {
 	};
 
 	this.renderNewNote = function() {
-		var rNN = document.querySelector('.newNoteForm');
+		var rNN = doc.querySelector('.newNoteForm');
 		rNN.innerHTML = `
         <textarea class = "textarea" id = "textarea" placeholder="Enter note here..."></textarea>
         <button id="newMessage">New</button>
@@ -54,7 +54,7 @@ var NotesView = function() {
 	};
 
 	this.renderShowNote = function(note) {
-		var rSN = document.querySelector('.window');
+		var rSN = doc.querySelector('.window');
 		rSN.innerHTML = `
         <div class="modal-content">
           <div class="modal-header">
@@ -68,17 +68,17 @@ var NotesView = function() {
           </div>
         </div>
       `;
-		var modal = document.querySelector('.modal');
+		var modal = doc.querySelector('.modal');
 		modal.style.display = 'block';
 	};
 
 	this.renderCloseNote = function() {
-		var modal = document.querySelector('.modal');
+		var modal = doc.querySelector('.modal');
 		modal.style.display = 'none';
 	};
 
 	this.extractText = function() {
-		var textarea = document.getElementById('textarea');
+		var textarea = doc.getElementById('textarea');
 		var text = textarea.value;
 		textarea.value = '';
 		return text;
