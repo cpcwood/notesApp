@@ -1,6 +1,7 @@
 var NotesView = function(doc) {
-	this.renderStructure = 3{
-		doc.body.innerHTML += `
+	this.renderStructure = function() {
+    doc.body.innerHTML += 
+    `
     <div class="firstPage">
       <header class="mainNav"> 
         <div class="logo">
@@ -27,60 +28,63 @@ var NotesView = function(doc) {
         <div class='window'></div>
       </div>
      
-    </div>`;
-	};
+    </div>
+    `
+	}
 
 	this.renderNotesList = function(notes) {
-		var nLL = doc.querySelector('.notesListLines');
-		if (typeof notes[0] !== 'undefined') {
-			nLL.innerHTML = '';
-			notes.forEach(function(note) {
-				nLL.innerHTML += `
-          <li class='listItem' id='${note.id}'>
-            ${note.title}
-          </li>
-        `;
-			});
+		var notesList = doc.querySelector('.notesListLines')
+		if (notes.length !== 0) {
+			notesList.innerHTML = ''
+			notes.forEach( function(note) {
+        notesList.innerHTML += 
+        `
+        <li class='listItem' id='${note.id}'>
+          ${note.title}
+        </li>
+        `
+			})
 		}
 	};
 
 	this.renderNewNote = function() {
-		var rNN = doc.querySelector('.newNoteForm');
-		rNN.innerHTML = `
-        <textarea class = "textarea" id = "textarea" placeholder="Enter note here..."></textarea>
-        <button id="newMessage">New</button>
-      
-      `;
-	};
+		var newNoteForm = doc.querySelector('.newNoteForm')
+    newNoteForm.innerHTML = 
+    `
+    <textarea class = "textarea" id = "textarea" placeholder="Enter note here..."></textarea>
+    <button id="newMessage">New</button>
+    `
+	}
 
 	this.renderShowNote = function(note) {
-		var rSN = doc.querySelector('.window');
-		rSN.innerHTML = `
-        <div class="modal-content">
-          <div class="modal-header">
-            ${note.id} : ${note.title}
-          </div>
-          <div class="modal-body">
-            ${note.note}
-          </div>
-          <div class=modal-footer>
-            <button class="close" id="closeWindow">Close</button>
-          </div>
-        </div>
-      `;
-		var modal = doc.querySelector('.modal');
-		modal.style.display = 'block';
-	};
+		var windowDiv = doc.querySelector('.window')
+    windowDiv.innerHTML = 
+    `
+    <div class="modal-content">
+      <div class="modal-header">
+        ${note.id} : ${note.title}
+      </div>
+      <div class="modal-body">
+        ${note.note}
+      </div>
+      <div class=modal-footer>
+        <button class="close" id="closeWindow">Close</button>
+      </div>
+    </div>
+    `
+		var modal = doc.querySelector('.modal')
+		modal.style.display = 'block'
+	}
 
 	this.renderCloseNote = function() {
-		var modal = doc.querySelector('.modal');
-		modal.style.display = 'none';
-	};
+		var modal = doc.querySelector('.modal')
+		modal.style.display = 'none'
+	}
 
 	this.extractText = function() {
-		var textarea = doc.getElementById('textarea');
-		var text = textarea.value;
-		textarea.value = '';
-		return text;
-	};
-};
+		var textarea = doc.querySelector('#textarea')
+		var text = textarea.value
+		textarea.value = ''
+		return text
+	}
+}

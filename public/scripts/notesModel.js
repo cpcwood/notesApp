@@ -17,7 +17,4 @@ var NotesModel = function(){
     var result = this.notesArray.find(findNote)
     return result
   }
-
-
-  
 }
