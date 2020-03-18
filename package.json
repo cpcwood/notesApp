@@ -1,0 +1,24 @@
+{
+  "name": "notesapp",
+  "version": "1.0.0",
+  "description": "Single page web based notes app",
+  "main": "config.js",
+  "dependencies": {
+    "http-server": "^0.12.1",
+    "minimist": "^1.2.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "spec/specRunner.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cpcwood/notesApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cpcwood/notesApp/issues"
+  },
+  "homepage": "https://github.com/cpcwood/notesApp#readme"
+}
